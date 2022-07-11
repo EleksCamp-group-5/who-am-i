@@ -111,7 +111,6 @@ public class GameController {
 
     @GetMapping("/showPlayers")
     public int showPlayers() {
-
         return this.gameService.getAllPlayers();
     }
 
