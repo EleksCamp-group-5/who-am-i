@@ -144,6 +144,9 @@ public class GameServiceImpl implements GameService {
         if (game.getStatus().equals(GameStatus.GAME_IN_PROGRESS)) {
             game.answerGuessingQuestion(playerId, answerQuess);
         }
+        if(game.getPLayers().size() == 1){
+            this.gameRepository.deleteGame(gameId);
+        }
     }
 
     private PersistentGame checkGameExistence(String gameId) {
