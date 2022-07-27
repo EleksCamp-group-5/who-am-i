@@ -9,12 +9,12 @@ import org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfi
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.FilterType;
 
-@SpringBootApplication
+
+@SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 @ComponentScan(basePackages = {"com.eleks.academy.whoami"}, excludeFilters = {
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = ApiClient.class),
         @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, value = GameApi.class)
 })
-//@EnableAutoConfiguration(exclude = SecurityAutoConfiguration.class)
 public class WhoAmIApplication {
 
     public static void main(String[] args) {

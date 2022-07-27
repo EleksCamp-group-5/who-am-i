@@ -9,9 +9,10 @@ game:
 
 spring:
   datasource:
-    url: jdbc:postgresql:whoami
-    username: postgres
-    password: postgres
+    url: ${JDBC_DATABASE_URL}
+    username: ${JDBC_DATABASE_USERNAME}
+    password: ${JDBC_DATABASE_PASSWORD}
   jpa:
+    open-in-view: false
     hibernate:
       ddl-auto: validate

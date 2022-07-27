@@ -8,9 +8,8 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Configuration
-@EnableWebSecurity
 @RequiredArgsConstructor
-public class WebSecurity extends WebSecurityConfigurerAdapter {
+public class WebSecurity {
 
        @Bean
     public BCryptPasswordEncoder bCryptPasswordEncoder() {
